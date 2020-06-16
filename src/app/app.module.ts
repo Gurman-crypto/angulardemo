@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JokeComponent } from './components/joke/joke.component';
+import { JokeListComponent } from './components/jokelist/jokelist.component';
+import { JokeFormComponent } from './components/jokeform/jokeform.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,JokeComponent,JokeListComponent,JokeFormComponent
   ],
   imports: [
     BrowserModule,
