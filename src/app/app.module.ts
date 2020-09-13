@@ -16,10 +16,13 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import { ProductsComponent } from './components/products/products.component';
+import { DemoRequestComponent } from './components/demo-request/demo-request.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
-    AppComponent,JokeComponent,JokeListComponent,JokeFormComponent,SignUpFormComponent, HeaderComponent, FooterComponent, MainpageComponent
+    AppComponent,JokeComponent,JokeListComponent,JokeFormComponent,SignUpFormComponent, HeaderComponent, FooterComponent, MainpageComponent, ProductsComponent, DemoRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
     NgbModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
