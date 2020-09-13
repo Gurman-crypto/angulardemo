@@ -1,2 +1,23 @@
 <joke-form (jokeCreated)="addJoke($event)"></joke-form>
+<button >Get Call</button>
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>Course Name</th>
+      <th>Rating</th>
+      <th>Duration</th>
+      <th>Level</th>
+      <th>Price</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let course of courses">
+            <td>{{course.name}}</td>
+            <td>{{course.rating}}</td>
+            <td>{{course.duration}}</td>
+            <td>{{course.level}}</td>
+            <td>{{course.price}}</td>
+            </tr>
+    </tbody>
+      </table>
 <joke *ngFor="let j of jokes" [joke]="j"></joke>

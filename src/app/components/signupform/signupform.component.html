@@ -1,9 +1,10 @@
 <div class="container">
-    <form novalidate
-        [formGroup]="myform">
+<br>
+    <form novalidate class="form-signin"
+        [formGroup]="myform" (ngSubmit)="onSubmit()">
   
-    <fieldset formGroupName="name">
-      <div class="form-group"
+    <fieldset formGroupName="name" >
+      <div class="form-group,form-label-group" 
            [ngClass]="{
           'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
           'has-success': firstName.valid && (firstName.dirty || firstName.touched)
@@ -24,7 +25,7 @@
         -->
       </div>
   
-      <div class="form-group"
+      <div class="form-group,form-label-group"
            [ngClass]="{
           'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
           'has-success': lastName.valid && (lastName.dirty || lastName.touched)
@@ -42,21 +43,19 @@
     </fieldset>
   
   
-    <div class="form-group"
+    <div class="form-group,form-label-group"
          [ngClass]="{
           'has-danger': email.invalid && (email.dirty || email.touched),
           'has-success': email.valid && (email.dirty || email.touched)
      }">
-      <label>Email</label>
-      <input type="email"
-             class="form-control"
-             formControlName="email"
-             required>
+     <label for="inputEmail">Email address</label>
+
+     <input type="email" class="form-control" placeholder="" formControlName="email" required autofocus>
+     
       <div class="form-control-feedback"
            *ngIf="email.errors && (email.dirty || email.touched)">
         <p *ngIf="email.errors.required">Email is required</p>
-        <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
-      </div>
+        </div>
   
       <!--
         <pre>Valid? {{ myform.controls.email.valid }}</pre>
@@ -65,7 +64,7 @@
   
     </div>
   
-    <div class="form-group"
+    <div class="form-group,form-label-group"
          [ngClass]="{
           'has-danger': password.invalid && (password.dirty || password.touched),
           'has-success': password.valid && (password.dirty || password.touched)
@@ -86,7 +85,7 @@
       <pre>{{ password.errors | json }}</pre>
     -->
   
-    <div class="form-group"
+    <div class="form-group,form-label-group"
          [ngClass]="{
           'has-danger': language.invalid && (language.dirty || language.touched),
           'has-success': language.valid && (language.dirty || language.touched)
@@ -100,7 +99,10 @@
         </option>
       </select>
     </div>
-  
-    <pre>{{myform.value | json}}</pre>
+  <br>
+    <button type="submit">Request Demo</button>
+ 
+<!--
+    <pre>{{myform.value | json}}</pre> -->
   </form>
   </div>

@@ -6,12 +6,13 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
     templateUrl: './signupform.component.html',
     styleUrls: ['./signupform.component.css']
   })
-  class ModelFormComponent implements OnInit {
+  export class SignUpFormComponent implements OnInit {
     langs: string[] = [
       'English',
       'French',
       'punjabi'
     ];
+
     myform: FormGroup;
     firstName: FormControl;
     lastName: FormControl;
@@ -49,5 +50,9 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
         password: this.password,
         language: this.language
       });
+    }
+
+    onSubmit(): void {
+      console.log(this.myform.value);  // {first: 'Nancy', last: 'Drew'}
     }
   }

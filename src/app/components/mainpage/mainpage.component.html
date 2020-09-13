@@ -1,0 +1,30 @@
+<section class="homepage">
+    <mat-sidenav-container class="sidenav-container" >
+        <mat-sidenav class="sidenav-titles" mode="side" opened>
+            <mat-nav-list>
+                <a mat-list-item routerLink="." >About Us</a>
+               
+                <a mat-list-item [matMenuTriggerFor]="Products"> Products</a>
+
+              <mat-menu #Products="matMenu">
+              <button mat-menu-item>Personal Manager</button>
+              <button mat-menu-item>Manager for Charterred Accountants</button>
+              <button mat-menu-item>Manager for Developers</button>
+              <button mat-menu-item >Manager for Professionals</button>
+              </mat-menu>
+
+                <a mat-list-item routerLink="." >Our Services</a>
+                <a mat-list-item routerLink="." >Register for Demo</a>
+                <a mat-list-item routerLink="." >Why Us</a>
+                <a mat-list-item routerLink="." >Contact Us</a>
+                <a mat-list-item routerLink="." >Blogs</a>
+                <a mat-list-item routerLink="." >Careers</a>
+                <!--<a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>-->
+              </mat-nav-list>
+              
+        </mat-sidenav>
+        <mat-sidenav-content class="sidenav-body">Main content</mat-sidenav-content>
+      </mat-sidenav-container>
+</section>
+
+
