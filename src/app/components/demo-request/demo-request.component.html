@@ -1,1 +1,11 @@
-<p>demo-request works!</p>
+<mat-calendar #calendar style="width: 500px;">
+</mat-calendar>
+
+    <input matInput [matDatepicker]="picker"
+           (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+ 
+  <div class="example-events">
+    <div *ngFor="let e of events">tasks </div>
+  </div>

@@ -19,7 +19,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ProductsComponent } from './components/products/products.component';
 import { DemoRequestComponent } from './components/demo-request/demo-request.component';
 import {MatTabsModule} from '@angular/material/tabs';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,JokeComponent,JokeListComponent,JokeFormComponent,SignUpFormComponent, HeaderComponent, FooterComponent, MainpageComponent, ProductsComponent, DemoRequestComponent
@@ -34,9 +35,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     NgbModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule,MatTabsModule
+    MatMenuModule,MatTabsModule, MatDatepickerModule, MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

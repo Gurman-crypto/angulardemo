@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 
 @Component({
   selector: 'demo-request',
@@ -10,6 +11,12 @@ export class DemoRequestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  events: string[] = [];
+
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
   }
 
 }
